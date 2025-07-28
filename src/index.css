@@ -8,7 +8,7 @@
 
   --color-background-100: hsl(235, 73%, 6%);
   --color-background-200: hsl(217, 33%, 17%);
-  --color-background-200: hsl(215, 25%, 27%);
+  --color-background-300: hsl(215, 25%, 27%);
 
   --color-txt-100: hsl(210, 40%, 98%);
   --color-txt-200: hsl(213, 27%, 84%);
@@ -24,10 +24,15 @@
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 1.125rem; /* 18px */
+    overflow: hidden;
   }
 }
 
 @layer components {
+  .main-container {
+    @apply max-w-7xl px-8 sm:px-18 mx-auto;
+  }
+
   .heading-1 {
     @apply font-sans font-bold text-txt-100 text-[4.5rem]; /* 72rem */
   }
@@ -42,5 +47,37 @@
 
   .mono-txt {
     @apply font-mono text-[1.125rem] text-primary; /* 18px */
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center gap-4;
+  }
+
+  .primary-btn {
+    @apply ring ring-primary font-mono text-primary px-4 py-2 rounded-md hover:bg-primary/10 hover:cursor-pointer;
+  }
+
+  .logo {
+    @apply font-mono font-bold text-primary text-2xl;
+  }
+
+  .nav-links {
+    @apply font-mono text-txt-100 text-[14px];
+  }
+
+  .navbar-web {
+    @apply py-4 md:mt-2 z-10;
+  }
+
+  .menu-icon {
+    @apply text-primary size-8 hover:cursor-pointer;
+  }
+
+  .mobile-nav-wrapper {
+    @apply absolute z-5 bg-background-100/80 h-screen w-screen top-15 left-0;
+  }
+
+  .mobile-nav-links {
+    @apply flex flex-col justify-center items-center md:hidden gap-8 h-[90%];
   }
 }
