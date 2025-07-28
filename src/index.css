@@ -24,29 +24,30 @@
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 1.125rem; /* 18px */
-    overflow: hidden;
+    overflow-x: hidden;
   }
 }
 
 @layer components {
   .main-container {
-    @apply max-w-7xl px-8 sm:px-18 mx-auto;
+    @apply max-w-7xl px-6 sm:px-18 mx-auto;
   }
 
-  .heading-1 {
-    @apply font-sans font-bold text-txt-100 text-[4.5rem]; /* 72rem */
+  .heading-1,
+  .heading-2 {
+    @apply font-sans font-bold text-txt-100 md:text-7xl/20 sm:text-5xl text-4xl;
   }
 
   .heading-2 {
-    @apply font-sans font-bold text-txt-300 text-[4.5rem]; /* 72rem */
+    @apply text-txt-300;
   }
 
   .section-heading {
-    @apply font-mono font-bold text-txt-300 text-[1.875rem]; /* 30px*/
+    @apply font-mono font-bold text-txt-300 md:text-3xl text-xs;
   }
 
   .mono-txt {
-    @apply font-mono text-[1.125rem] text-primary; /* 18px */
+    @apply font-mono text-lg text-primary;
   }
 
   .flex-between {
@@ -54,19 +55,20 @@
   }
 
   .primary-btn {
-    @apply ring ring-primary font-mono text-primary px-4 py-2 rounded-md hover:bg-primary/10 hover:cursor-pointer;
+    @apply flex items-center gap-2 ring ring-primary font-mono text-primary px-8 py-4 rounded-md hover:bg-primary/15 hover:cursor-pointer transition-colors duration-300;
   }
 
+  /* Navbar */
   .logo {
     @apply font-mono font-bold text-primary text-2xl;
   }
 
   .nav-links {
-    @apply font-mono text-txt-100 text-[14px];
+    @apply font-mono text-txt-100 text-sm;
   }
 
   .navbar-web {
-    @apply py-4 md:mt-2 z-10;
+    @apply py-4 z-10;
   }
 
   .menu-icon {
@@ -74,10 +76,15 @@
   }
 
   .mobile-nav-wrapper {
-    @apply absolute z-5 bg-background-100/80 h-screen w-screen top-15 left-0;
+    @apply absolute z-5 bg-background-100/95 h-screen w-screen top-15 left-0;
   }
 
   .mobile-nav-links {
-    @apply flex flex-col justify-center items-center md:hidden gap-8 h-[90%];
+    @apply flex flex-col justify-center items-center md:hidden font-mono gap-8 h-[90%];
+  }
+
+  /* Hero Section  */
+  .hero-container {
+    @apply flex flex-col justify-center items-start min-h-screen lg:pl-36;
   }
 }

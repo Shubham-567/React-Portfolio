@@ -11,7 +11,7 @@ function Navbar() {
   // TODO: Add GSAP Animations
 
   return (
-    <header className='relative'>
+    <header className='sticky top-0'>
       <div
         className={`main-container navbar-web flex-between ${
           isOpen ? "bg-background-200" : ""
@@ -21,7 +21,7 @@ function Navbar() {
           {navlinks.map((link, i) => (
             <li key={"link" + i} className='nav-links hover:text-primary'>
               {link && link === "Resume" ? (
-                <Button value={link} />
+                <Button value={link} padding='px-4 py-2' />
               ) : (
                 <a href={link}>{link}</a>
               )}
@@ -48,7 +48,7 @@ function Navbar() {
                 key={"link" + i}
                 className='text-2xl navLinks hover:text-primary'>
                 {link && link === "Resume" ? (
-                  <Button value={link} />
+                  <Button value={link} padding='px-4 py-2' />
                 ) : (
                   <a href={link}>{link}</a>
                 )}
