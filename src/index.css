@@ -43,7 +43,11 @@
   }
 
   .section-heading {
-    @apply font-mono font-bold text-txt-300 md:text-3xl text-xs;
+    @apply flex items-center w-full font-mono font-bold text-txt-300 md:text-3xl text-2xl;
+  }
+
+  .section-heading > .line {
+    @apply flex-grow border-t border-txt-300 ml-4;
   }
 
   .mono-txt {
@@ -85,6 +89,25 @@
 
   /* Hero Section  */
   .hero-container {
-    @apply flex flex-col justify-center items-start min-h-screen lg:pl-36;
+    @apply flex flex-col justify-center items-start py-26 lg:px-20;
   }
+
+  .section-container {
+    @apply flex flex-col justify-center items-start py-26 lg:px-20;
+  }
+
+  /* Skill Section*/
+  .skill-grid {
+    @apply grid grid-cols-2 md:grid-cols-4 py-6 gap-4 w-full;
+  }
+
+  .skill-card {
+    @apply flex flex-col items-center justify-center gap-4 px-12 py-6 font-mono text-sm bg-background-200 rounded-lg hover:-translate-y-2 transition-all duration-300;
+  }
+
+  .skill-icon {
+    @apply size-10 text-primary;
+  }
+
+  /* Project Section*/
 }

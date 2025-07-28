@@ -5,9 +5,8 @@ function Hero() {
   // TODO: add GSAP animations
 
   return (
-    <div className='hero-container'>
+    <section className='hero-container'>
       {/* Heading  */}
-
       <p className='mono-txt'>Hi, my name is</p>
       <h1 className='heading-1'>Shubham Patil.</h1>
       <h2 className='heading-2'>I build things for the web.</h2>
@@ -25,7 +24,7 @@ function Hero() {
         <Button value='View My Projects' />
         <Button value='Download Resume' icon={<Download />} />
       </div>
-    </div>
+    </section>
   );
 }
 
