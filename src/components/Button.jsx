@@ -1,6 +1,6 @@
-function Button({ value, icon = "", padding = "px-8 py-4" }) {
+function Button({ value, icon = "", padding = "px-8 py-4", type = "text" }) {
   return (
-    <button className={`primary-btn ${padding}`}>
+    <button type={type} className={`primary-btn ${padding}`}>
       {icon}
       {value}
     </button>

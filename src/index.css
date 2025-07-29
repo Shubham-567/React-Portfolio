@@ -40,6 +40,10 @@
     @apply font-sans font-bold text-txt-100 md:text-6xl/20 sm:text-5xl text-4xl;
   }
 
+  .heading-1 {
+    @apply bg-gradient-to-r from-fuchsia-50 to-fuchsia-300 bg-clip-text text-transparent;
+  }
+
   .heading-2 {
     @apply text-txt-300;
   }
@@ -159,10 +163,36 @@
   }
 
   .profile-img {
-    @apply size-78 object-cover bg-txt-300 rounded-lg grayscale z-2;
+    @apply size-78 object-cover bg-gradient-to-r from-violet-200 to-pink-200 transition-all duration-300 rounded-lg grayscale z-2;
   }
 
   .profile-img-hover {
     @apply absolute top-0 size-78 w-full bg-primary transition-all duration-300 -z-10 rounded-lg;
+  }
+
+  /* Contact Form */
+  .form-container {
+    @apply py-6 md:max-w-3/4 mx-auto;
+  }
+
+  .input-box {
+    @apply w-full bg-background-200 border border-background-300 text-txt-100 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-colors;
+  }
+
+  .input-container {
+    @apply flex max-md:flex-col items-center gap-4;
+  }
+
+  .input-wrapper {
+    @apply flex flex-col gap-1 w-full;
+  }
+
+  .input-wrapper > label {
+    @apply font-mono text-sm text-txt-200;
+  }
+
+  /* Footer Section*/
+  .footer-text {
+    @apply font-mono text-sm text-center text-txt-300 mx-auto pb-6;
   }
 }

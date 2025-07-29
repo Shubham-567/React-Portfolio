@@ -11,7 +11,7 @@ function Navbar() {
   // TODO: Add GSAP Animations
 
   return (
-    <header className='sticky top-0'>
+    <header className='sticky top-0 z-40'>
       <div
         className={`main-container navbar-web flex-between ${
           isOpen ? "bg-background-200" : ""
