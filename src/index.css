@@ -6,6 +6,8 @@
   --font-sans: "Inter", sans-serif;
   --font-mono: "Fira Code", monospace;
 
+  --text-2xs: 0.6rem;
+
   --color-background-100: hsl(235, 73%, 6%);
   --color-background-200: hsl(217, 33%, 17%);
   --color-background-300: hsl(215, 25%, 27%);
@@ -35,7 +37,7 @@
 
   .heading-1,
   .heading-2 {
-    @apply font-sans font-bold text-txt-100 md:text-7xl/20 sm:text-5xl text-4xl;
+    @apply font-sans font-bold text-txt-100 md:text-6xl/20 sm:text-5xl text-4xl;
   }
 
   .heading-2 {
@@ -89,11 +91,11 @@
 
   /* Hero Section  */
   .hero-container {
-    @apply flex flex-col justify-center items-start py-26 lg:px-20;
+    @apply flex flex-col justify-center items-start py-26;
   }
 
   .section-container {
-    @apply flex flex-col justify-center items-start py-26 lg:px-20;
+    @apply flex flex-col justify-center items-start py-26;
   }
 
   /* Skill Section*/
@@ -110,4 +112,43 @@
   }
 
   /* Project Section*/
+  .project-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 py-6 gap-6 w-full;
+  }
+
+  .project-card {
+    @apply bg-background-200 rounded-lg;
+  }
+
+  .project-card .image-wrapper {
+    @apply relative h-min overflow-hidden rounded-lg bg-background-300;
+  }
+
+  .project-card-img {
+    @apply w-full object-cover max-h-50 min-h-50 rounded-t-lg group-hover:scale-105 transition-all duration-500 cursor-pointer;
+  }
+
+  .image-overlay {
+    @apply absolute opacity-0  top-0 left-0 bg-primary/30 z-10 w-full max-h-50 min-h-50 rounded-t-lg transition-all duration-500 cursor-pointer flex justify-center items-center;
+  }
+
+  .project-info {
+    @apply p-4 flex flex-col justify-between;
+  }
+
+  .project-info .title {
+    @apply text-lg font-bold text-txt-100 mb-2;
+  }
+
+  .project-info .skill-container {
+    @apply flex items-center gap-2 flex-wrap mt-4;
+  }
+
+  .project-info .skill-badge {
+    @apply px-4 py-2 bg-background-100 text-txt-200 text-2xs rounded-full cursor-default;
+  }
+
+  .project-info .links-container {
+    @apply flex items-center gap-2 mt-4 mb-0 pl-2;
+  }
 }
