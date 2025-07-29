@@ -25,7 +25,7 @@
     color: hsl(210, 40%, 98%);
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    font-size: 1.125rem; /* 18px */
+    font-size: 1rem; /* 16px */
     overflow-x: hidden;
   }
 }
@@ -150,5 +150,19 @@
 
   .project-info .links-container {
     @apply flex items-center gap-2 mt-4 mb-0 pl-2;
+  }
+
+  /*About Section*/
+
+  .about-container {
+    @apply flex flex-col md:flex-row justify-center items-start gap-6 py-6;
+  }
+
+  .profile-img {
+    @apply size-78 object-cover bg-txt-300 rounded-lg grayscale z-2;
+  }
+
+  .profile-img-hover {
+    @apply absolute top-0 size-78 w-full bg-primary transition-all duration-300 -z-10 rounded-lg;
   }
 }
