@@ -3,15 +3,15 @@ import { projects } from "../constants/constants";
 
 function Projects() {
   return (
-    <section className='section-container'>
-      <h3 class='section-heading'>
+    <section id='projects' className='section-container'>
+      <h3 className='section-heading'>
         Things I've Built
-        <span class='line' />
+        <span className='line' />
       </h3>
 
       <div className='project-grid'>
-        {projects.map((project) => (
-          <ProjectCard project={project} />
+        {projects.map((project, i) => (
+          <ProjectCard key={i} project={project} />
         ))}
       </div>
     </section>

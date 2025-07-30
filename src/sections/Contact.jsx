@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import Button from "../components/Button";
 import emailjs from "@emailjs/browser";
 import Toast from "../components/Toast";
+import { Loader, Loader2 } from "lucide-react";
 
 function Contact() {
   const [isLoading, setIsLoading] = useState(false);
@@ -15,15 +16,11 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setShowToast(true);
     setIsLoading(true);
-
-    // TODO add Toast component for success and error messages
-    // TODO add proper input validation
 
     emailjs
       .sendForm(serviceId, templateId, form.current, {
-        // publicKey: publicKey,
+        publicKey: publicKey,
       })
       .then(
         () => {
@@ -35,15 +32,18 @@ function Contact() {
           setStatus("error");
         }
       )
-      .finally(() => setIsLoading(false));
+      .finally(() => {
+        setIsLoading(false);
+        setShowToast(true);
+      });
   };
 
   return (
     <>
-      <section className='section-container'>
-        <h3 class='section-heading'>
+      <section id='contact' className='section-container'>
+        <h3 className='section-heading'>
           Contact
-          <span class='line' />
+          <span className='line' />
         </h3>
 
         <div className='form-container'>
@@ -61,7 +61,8 @@ function Contact() {
                   name='user_name'
                   type='text'
                   placeholder='Your Name'
-                  class='input-box'
+                  className='input-box'
+                  required
                 />
               </div>
 
@@ -72,7 +73,8 @@ function Contact() {
                   name='user_email'
                   type='email'
                   placeholder='Your Email'
-                  class='input-box'
+                  className='input-box'
+                  required
                 />
               </div>
             </div>
@@ -84,15 +86,19 @@ function Contact() {
                 placeholder='your message'
                 className='input-box'
                 rows='4'
+                required
               />
             </div>
 
             <div className='flex justify-center'>
               <Button
                 type='submit'
-                value={isLoading ? "Sending..." : "Send Message"}
-                isLoading={isLoading}
-              />
+                className={`${
+                  isLoading ? "cursor-not-allowed bg-background-200" : ""
+                }`}>
+                {isLoading && <Loader2 className='animate-spin' />}
+                {isLoading ? "Sending..." : "Send Message"}
+              </Button>
             </div>
           </form>
         </div>

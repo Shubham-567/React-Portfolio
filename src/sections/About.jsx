@@ -1,25 +1,25 @@
 function About() {
   return (
-    <section className='section-container'>
-      <h3 class='section-heading'>
+    <section id='about' className='section-container'>
+      <h3 className='section-heading'>
         About Me
-        <span class='line' />
+        <span className='line' />
       </h3>
 
       <div className='about-container'>
         <div className='md:w-2/3 space-y-6'>
           <p className='text-txt-300'>
-            Hello! I'm Jane, a developer with a passion for creating beautiful
-            and functional interfaces. My journey into web development started
-            during my university days, where I discovered a love for turning
-            complex problems into elegant, interactive designs. I thrive on
-            learning new technologies and continuously honing my craft.
+            Hi, I’m Shubham, a full-stack web developer with a focus on building
+            real-world applications using the MERN stack. I started exploring
+            web development alongside my BCA studies and quickly became
+            passionate about solving problems through code.
           </p>
           <p className='text-txt-300'>
-            My goal is to join a forward-thinking company where I can contribute
-            to meaningful projects, collaborate with talented individuals, and
-            grow as a developer. I'm particularly interested in roles that
-            challenge me to blend my technical skills with my eye for design.
+            I enjoy working on both frontend and backend, and have built several
+            full-stack projects involving authentication, payments, and AI
+            integration. I’m currently looking for opportunities to apply my
+            skills, learn from experienced developers, and grow through
+            meaningful work.
           </p>
         </div>
         <div className='md:w-1/3 relative group'>

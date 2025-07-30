@@ -1,20 +1,7 @@
-import { Loader } from "lucide-react";
-
-function Button({
-  value,
-  icon = "",
-  padding = "px-8 py-4",
-  type = "text",
-  isLoading = false,
-}) {
+function Button({ className = "px-8 py-4", type = "text", children }) {
   return (
-    <button
-      type={type}
-      className={`primary-btn ${padding} ${
-        isLoading ? "cursor-not-allowed bg-background-200" : ""
-      }`}>
-      {icon} {isLoading && <Loader className='animate-spin' />}
-      {value}
+    <button type={type} className={`primary-btn ${className}`}>
+      {children}
     </button>
   );
 }

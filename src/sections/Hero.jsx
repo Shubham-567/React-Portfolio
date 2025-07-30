@@ -8,21 +8,29 @@ function Hero() {
     <section className='hero-container'>
       {/* Heading  */}
       <p className='mono-txt'>Hi, my name is</p>
-      <h1 className='heading-1'>Shubham Patil.</h1>
-      <h2 className='heading-2'>I build things for the web.</h2>
+      <h1 className='heading-1'>
+        <span className='name'>Shubham Patil</span>Turning designs into usable
+        web experiences.
+      </h1>
 
       {/* Description */}
       <p className='text-txt-300 md:max-w-2/3 my-6'>
-        I'm a passionate frontend developer specializing in creating modern,
-        responsive, and user-friendly web applications. As a recent graduate,
-        I'm eager to apply my skills in React and UI/UX design to build amazing
-        digital experiences.
+        I build responsive web apps using React, Node.js, Express, and MongoDB.
+        I focus on both frontend and backend development, with attention to
+        detail, clean structure, and practical problem-solving.
       </p>
 
       {/* Call to action */}
       <div className='flex flex-col sm:flex-row items-start sm:items-center gap-4 text-sm'>
-        <Button value='View My Projects' />
-        <Button value='Download Resume' icon={<Download />} />
+        <a
+          href='https://drive.google.com/file/d/1nqk791XKzc7LjqS6XTKrSqztQoqwsSN-/view'
+          target='_blank'
+          rel='noopener noreferrer'>
+          <Button>
+            <Download />
+            Download Resume
+          </Button>
+        </a>
       </div>
     </section>
   );

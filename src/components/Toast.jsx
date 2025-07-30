@@ -7,18 +7,21 @@ function Toast({ onClose, type = "success" }) {
     return () => clearTimeout(timer);
   }, [onClose]);
 
-  const isSuccess = type === "success";
+  const isSuccess = type.toLowerCase() === "success";
+  const isError = type.toLowerCase() === "error";
 
   const icon = isSuccess ? (
     <CircleCheckBig className='text-primary size-10 pb-3' />
   ) : (
-    <CircleAlert className='text-red-500 size-10 pb-3' />
+    isError && <CircleAlert className='text-red-500 size-10 pb-3' />
   );
 
-  const title = isSuccess ? "Message Sent!" : "Something went wrong!";
+  const title = isSuccess
+    ? "Message Sent!"
+    : isError && "Something went wrong!";
   const message = isSuccess
     ? "Thank you for your message. I will get back to you soon."
-    : "Sorry, your message could not be sent. Please try again.";
+    : isError && "Sorry, your message could not be sent. Please try again.";
 
   //ToDo: add GSAP animation
 

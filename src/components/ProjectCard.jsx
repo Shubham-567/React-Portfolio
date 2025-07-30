@@ -5,7 +5,7 @@ function ProjectCard({ project }) {
 
   return (
     <div className='project-card'>
-      <div class='image-wrapper group'>
+      <div className='image-wrapper group'>
         <img
           src={imgUrl}
           alt={title + " image"}
@@ -30,11 +30,13 @@ function ProjectCard({ project }) {
         </div>
 
         <div className='links-container'>
-          <a href={repo}>
-            <Github className='size-6 hover:text-primary' />
+          <a href={repo} target='_blank' className='project-link-btn'>
+            <Github size={20} />
+            <span>GitHub</span>
           </a>
-          <a href={live}>
-            <ArrowUpRight className='size-8 hover:text-primary' />
+          <a href={live} target='_blank' className='project-link-btn'>
+            <ArrowUpRight size={20} />
+            <span>Live</span>
           </a>
         </div>
       </div>

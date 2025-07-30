@@ -2,10 +2,10 @@ import { skills } from "../constants/constants";
 
 function Skills() {
   return (
-    <section className='section-container'>
-      <h3 class='section-heading'>
+    <section id='skills' className='section-container'>
+      <h3 className='section-heading'>
         My Skills
-        <span class='line' />
+        <span className='line' />
       </h3>
 
       <div className='skill-grid'>

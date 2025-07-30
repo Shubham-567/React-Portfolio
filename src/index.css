@@ -20,6 +20,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: hsl(235, 73%, 6%);
     color: hsl(210, 40%, 98%);
@@ -46,17 +50,12 @@
     @apply max-w-7xl px-6 sm:px-18 mx-auto;
   }
 
-  .heading-1,
-  .heading-2 {
-    @apply font-sans font-bold text-txt-100 md:text-6xl/20 sm:text-5xl text-4xl;
-  }
-
   .heading-1 {
-    @apply bg-gradient-to-r from-fuchsia-50 to-fuchsia-300 bg-clip-text text-transparent;
+    @apply font-sans font-bold text-txt-300 md:text-6xl sm:text-5xl text-4xl;
   }
 
-  .heading-2 {
-    @apply text-txt-300;
+  .heading-1 > .name {
+    @apply block bg-gradient-to-r from-fuchsia-50 to-fuchsia-300 bg-clip-text text-transparent;
   }
 
   .section-heading {
@@ -86,6 +85,10 @@
 
   .nav-links {
     @apply font-mono text-txt-100 text-sm;
+  }
+
+  .underline {
+    @apply block max-w-0 group-hover:max-w-full transition-all duration-500 h-[3px] bg-primary rounded-full;
   }
 
   .navbar-web {
@@ -165,6 +168,10 @@
 
   .project-info .links-container {
     @apply flex items-center gap-2 mt-4 mb-0 pl-2;
+  }
+
+  .project-link-btn {
+    @apply ring ring-background-300 outline-none py-2 px-2 rounded-md flex items-center gap-1 text-xs hover:text-primary;
   }
 
   /*About Section*/

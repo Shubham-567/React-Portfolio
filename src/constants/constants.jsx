@@ -1,86 +1,55 @@
-import { FaFigma, FaGithub, FaNodeJs, FaReact } from "react-icons/fa";
+import { FaNodeJs, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiTypescript } from "react-icons/si";
+import { SiExpress, SiMongodb, SiMysql } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
 export const skills = [
-  {
-    icon: <IoLogoJavascript className='skill-icon' />,
-    skill: "JavaScript",
-  },
-  {
-    icon: <SiTypescript className='skill-icon' />,
-    skill: "TypeScript",
-  },
-  {
-    icon: <FaReact className='skill-icon' />,
-    skill: "React",
-  },
-  {
-    icon: <TbBrandNextjs className='skill-icon' />,
-    skill: "Next.js",
-  },
-  {
-    icon: <FaNodeJs className='skill-icon' />,
-    skill: "Node.js",
-  },
-  {
-    icon: <RiTailwindCssFill className='skill-icon' />,
-    skill: "Tailwind CSS",
-  },
-  {
-    icon: <FaFigma className='skill-icon' />,
-    skill: "Figma",
-  },
-  {
-    icon: <FaGithub className='skill-icon' />,
-    skill: "Git",
-  },
+  { icon: <IoLogoJavascript className='skill-icon' />, skill: "JavaScript" },
+  { icon: <FaReact className='skill-icon' />, skill: "React.js" },
+  { icon: <TbBrandNextjs className='skill-icon' />, skill: "Next.js" },
+  { icon: <FaNodeJs className='skill-icon' />, skill: "Node.js" },
+  { icon: <SiExpress className='skill-icon' />, skill: "Express.js" },
+  { icon: <SiMongodb className='skill-icon' />, skill: "MongoDB" },
+  { icon: <SiMysql className='skill-icon' />, skill: "MySQL" },
+  { icon: <RiTailwindCssFill className='skill-icon' />, skill: "Tailwind CSS" },
 ];
 
 export const projects = [
   {
-    imgUrl:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&h=300&fit=crop",
-    title: "E-commerce Platform",
+    imgUrl: "images/project-1.png",
+    title: "RentEase – Car Rental System",
     description:
-      "A full-featured e-commerce site with product listings, a shopping cart, and a secure checkout process. Built with a focus on performance and user experience.",
-    techStack: ["Figma", "React", "Next.js", "Stripe", "Tailwind CSS"],
-    repo: "",
-    live: "",
+      "Full-stack app for browsing, booking cars in real-time with secure payments. Includes dashboards for admins and users, built with JWT auth.",
+    techStack: ["React", "Node.js", "Express", "MySQL", "Tailwind CSS"],
+    repo: "https://github.com/Shubham-567/RentEase-Car-Rental-System",
+    live: "https://rent-ease-site.vercel.app",
   },
-
   {
-    imgUrl:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&h=300&fit=crop",
-    title: "Task Management App",
+    imgUrl: "images/project-2.png",
+    title: "PitchBase – Startup Pitch Platform",
     description:
-      "A Kanban-style task management application with drag-and-drop functionality, user authentication, and real-time updates.",
-    techStack: ["React", "Firebase", "dnd-kit", "Zustand"],
-    repo: "",
-    live: "",
+      "Platform where users pitch startup ideas, create profiles, sign in with GitHub, and browse other submissions using a clean UI.",
+    techStack: ["Next.js", "TypeScript", "Sanity CMS", "Tailwind CSS"],
+    repo: "https://github.com/Shubham-567/Pitch-Base",
+    live: "https://pitch-base.vercel.app",
   },
-
   {
-    imgUrl:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&h=300&fit=crop",
-    title: "Portfolio Website V1",
+    imgUrl: "images/project-3.png",
+    title: "PlanEase – AI Lesson Planner",
     description:
-      "My first personal portfolio website. It was a great learning experience in web animations and responsive design principles.",
-    techStack: ["HTML", "CSS", "JavaScript", "GSAP", "Tailwind CSS"],
-    repo: "",
-    live: "",
+      "AI-based lesson planner that helps teachers generate, edit, and export lesson plans using Google Gemini API and responsive UI.",
+    techStack: ["React", "Google Gemini API", "ShadCN UI", "Tailwind CSS"],
+    repo: "https://github.com/Shubham-567/AI-Lesson-Planner",
+    live: "https://plan-ease-site.vercel.app",
   },
-
   {
-    imgUrl:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&h=300&fit=crop",
-    title: "E-commerce Platform",
+    imgUrl: "images/project-4.png",
+    title: "Leaderboard App",
     description:
-      "A full-featured e-commerce site with product listings, a shopping cart, and a secure checkout process. Built with a focus on performance and user experience.",
-    techStack: ["React", "D3.js", "Next.js", "Express.js"],
-    repo: "",
-    live: "",
+      "Real-time leaderboard app with user selection, point claiming, history tracking, and a dynamic interface using MongoDB and REST API.",
+    techStack: ["React", "Node.js", "Express", "MongoDB"],
+    repo: "https://github.com/Shubham-567/leaderboard-project",
+    live: "https://leaderboard-web.vercel.app/",
   },
 ];
