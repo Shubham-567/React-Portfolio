@@ -30,6 +30,17 @@
   }
 }
 
+@layer utilities {
+  @keyframes progress {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+}
+
 @layer components {
   .main-container {
     @apply max-w-7xl px-6 sm:px-18 mx-auto;
@@ -194,5 +205,9 @@
   /* Footer Section*/
   .footer-text {
     @apply font-mono text-sm text-center text-txt-300 mx-auto pb-6;
+  }
+
+  .animate-progress {
+    animation: progress 4s linear forwards;
   }
 }
