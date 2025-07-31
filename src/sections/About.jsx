@@ -26,10 +26,10 @@ function About() {
           <img
             src='images/profile.png'
             alt='profile-pic'
-            className='profile-img group-hover:grayscale-0'
+            className='profile-img'
           />
 
-          <div className='profile-img-hover group-hover:translate-2 ' />
+          <div className='profile-img-hover' />
         </div>
       </div>
     </section>

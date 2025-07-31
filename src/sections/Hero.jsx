@@ -15,8 +15,8 @@ function Hero() {
       {/* Heading */}
       <p className='mono-txt'>Hi, my name is</p>
       <h1 className='heading-1'>
-        <span className='name'>Shubham</span>I turn designs into functional web
-        experiences.
+        <span className='name'>Shubham Patil</span>I turn designs into
+        functional web experiences.
       </h1>
 
       {/* Description */}
