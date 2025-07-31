@@ -8,10 +8,12 @@ import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
 import SocialLinks from "./components/SocialLinks";
+import StarsBackground from "./components/StarsBackground";
 
 function App() {
   return (
     <>
+      <StarsBackground />
       <Navbar />
       <main className='main-container max-w-5xl'>
         <Hero />
