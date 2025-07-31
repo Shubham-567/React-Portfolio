@@ -6,18 +6,18 @@ function Hero() {
 
   return (
     <section className='hero-container'>
-      {/* Heading  */}
+      {/* Heading */}
       <p className='mono-txt'>Hi, my name is</p>
       <h1 className='heading-1'>
-        <span className='name'>Shubham Patil</span>Turning designs into usable
+        <span className='name'>Shubham</span>I turn designs into functional
         web experiences.
       </h1>
 
       {/* Description */}
       <p className='text-txt-300 md:max-w-2/3 my-6'>
-        I build responsive web apps using React, Node.js, Express, and MongoDB.
-        I focus on both frontend and backend development, with attention to
-        detail, clean structure, and practical problem-solving.
+        I craft responsive web apps using React, Node.js, Express, and MongoDB.
+        I focus on both frontend and backend with attention to detail, clean
+        architecture, and practical problem-solving.
       </p>
 
       {/* Call to action */}

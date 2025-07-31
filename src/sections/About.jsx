@@ -9,10 +9,10 @@ function About() {
       <div className='about-container'>
         <div className='md:w-2/3 space-y-6'>
           <p className='text-txt-300'>
-            Hi, I’m Shubham, a full-stack web developer with a focus on building
-            real-world applications using the MERN stack. I started exploring
-            web development alongside my BCA studies and quickly became
-            passionate about solving problems through code.
+            Hi, I’m Shubham Patil, a full-stack web developer with a focus on
+            building real-world applications using the MERN stack. I started
+            exploring web development alongside my BCA studies and quickly
+            became passionate about solving problems through code.
           </p>
           <p className='text-txt-300'>
             I enjoy working on both frontend and backend, and have built several

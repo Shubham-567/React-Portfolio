@@ -2,21 +2,41 @@
 
 @import "tailwindcss";
 
-@theme {
+:root {
   --font-sans: "Inter", sans-serif;
   --font-mono: "Fira Code", monospace;
 
   --text-2xs: 0.6rem;
 
-  --color-background-100: hsl(235, 73%, 6%);
-  --color-background-200: hsl(217, 33%, 17%);
-  --color-background-300: hsl(215, 25%, 27%);
+  --color-background-100: hsl(30, 10%, 5%);
+  --color-background-200: hsl(30, 10%, 10%);
+  --color-background-300: hsl(30, 10%, 15%);
 
-  --color-txt-100: hsl(210, 40%, 98%);
-  --color-txt-200: hsl(213, 27%, 84%);
-  --color-txt-300: hsl(215, 20%, 65%);
+  --color-txt-100: hsl(30, 25%, 100%);
+  --color-txt-200: hsl(30, 20%, 80%);
+  --color-txt-300: hsl(30, 15%, 70%);
 
-  --color-primary: hsl(271, 81%, 56%);
+  --color-primary: hsl(15, 85%, 55%); /* Clay Orange */
+}
+
+@theme {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --text-2xs: var(--text-2xs);
+
+  --color-background-100: var(--color-background-100);
+  --color-background-200: var(--color-background-200);
+  --color-background-300: var(--color-background-300);
+
+  --color-txt-100: var(--color-txt-100);
+  --color-txt-200: var(--color-txt-200);
+  --color-txt-300: var(--color-txt-300);
+
+  --color-primary: var(--color-primary);
+
+  --color-border: var(--color-border);
+  --color-hover: var(--color-hover);
 }
 
 @layer base {
@@ -25,8 +45,8 @@
   }
 
   body {
-    background-color: hsl(235, 73%, 6%);
-    color: hsl(210, 40%, 98%);
+    background-color: var(--color-background-100);
+    color: var(--color-txt-100);
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 1rem; /* 16px */
@@ -55,7 +75,7 @@
   }
 
   .heading-1 > .name {
-    @apply block bg-gradient-to-r from-fuchsia-50 to-fuchsia-300 bg-clip-text text-transparent;
+    @apply block;
   }
 
   .section-heading {
@@ -185,7 +205,7 @@
   }
 
   .profile-img {
-    @apply w-78 h-86 md:size-78 object-cover bg-gradient-to-r from-violet-200 to-pink-200 transition-all duration-300 rounded-lg grayscale z-2;
+    @apply w-78 h-86 md:size-78 object-cover bg-gradient-to-r from-red-200 to-orange-200 transition-all duration-300 rounded-lg grayscale z-2;
   }
 
   .profile-img-hover {
