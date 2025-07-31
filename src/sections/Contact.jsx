@@ -83,7 +83,7 @@ function Contact() {
               <textarea
                 id='message'
                 name='user_message'
-                placeholder='your message'
+                placeholder='Your Message'
                 className='input-box'
                 rows='4'
                 required
@@ -93,6 +93,7 @@ function Contact() {
             <div className='flex justify-center'>
               <Button
                 type='submit'
+                isDisabled={isLoading}
                 className={`${
                   isLoading ? "cursor-not-allowed bg-background-200" : ""
                 }`}>

@@ -22,7 +22,7 @@ function SocialLinks() {
               );
             })}
           </ul>
-          <div className='h-28 w-px mt-6 bg-primary rounded-full' />
+          <div className='h-28 w-1 mt-6 bg-primary rounded-full' />
         </div>
       </div>
 
@@ -36,7 +36,7 @@ function SocialLinks() {
             className='font-mono text-txt-200 text-sm mb-0 hover:text-primary transition-all duration-300 transform hover:-translate-y-1'>
             shubhampatil1356@gmail.com
           </a>
-          <div className='h-28 w-px mt-6 bg-primary rounded-full' />
+          <div className='h-28 w-1 mt-6 bg-primary rounded-full' />
         </div>
       </div>
     </div>

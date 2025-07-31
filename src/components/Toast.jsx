@@ -27,7 +27,7 @@ function Toast({ onClose, type = "success" }) {
 
   return (
     <div className='toast-container'>
-      <div className='toast'>
+      <div className='p-4'>
         <div className='flex items-start gap-3'>
           {icon}
           <div className='space-y-1'>

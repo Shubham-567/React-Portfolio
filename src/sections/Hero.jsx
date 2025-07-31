@@ -7,23 +7,28 @@ function Hero() {
 
   return (
     <section className='hero-container'>
-      {/* Location */}
-      <p className='font-mono text-txt-300 hover:text-primary text-xs tracking-wide mb-6 flex items-center gap-2 cursor-default'>
-        <MapPin className='size-4' /> <span>Jalgaon, Maharashtra, India</span>
-      </p>
-
       {/* Heading */}
       <p className='mono-txt'>Hi, my name is</p>
-      <h1 className='heading-1'>
-        <span className='name'>Shubham Patil</span>I turn designs into
-        functional web experiences.
+      <h1 className='heading-1 text-balance'>
+        <span className='name'>Shubham Patil</span>I build fast, clean, and
+        reliable websites.
       </h1>
+
+      {/* Badge */}
+      <div className='mt-6'>
+        <span className='badge'>Full-stack Web Developer</span>
+      </div>
 
       {/* Description */}
       <p className='text-txt-300 md:max-w-2/3 my-6'>
         I craft responsive web apps using React, Node.js, Express, and MongoDB.
         I focus on both frontend and backend with attention to detail, clean
         architecture, and practical problem-solving.
+      </p>
+
+      {/* Location */}
+      <p className='font-mono text-txt-300 hover:text-primary text-xs tracking-wide mb-6 flex items-center gap-2 cursor-default'>
+        <MapPin className='size-4' /> <span>Jalgaon, Maharashtra, India</span>
       </p>
 
       {/* Call to action */}

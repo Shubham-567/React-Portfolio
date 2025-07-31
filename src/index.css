@@ -8,15 +8,15 @@
 
   --text-2xs: 0.6rem;
 
-  --color-background-100: hsl(30, 10%, 5%);
-  --color-background-200: hsl(30, 10%, 10%);
-  --color-background-300: hsl(30, 10%, 15%);
+  --color-background-100: hsl(240, 15%, 4%);
+  --color-background-200: hsl(240, 12%, 9%);
+  --color-background-300: hsl(240, 10%, 14%);
 
-  --color-txt-100: hsl(30, 25%, 100%);
-  --color-txt-200: hsl(30, 20%, 80%);
-  --color-txt-300: hsl(30, 15%, 70%);
+  --color-txt-100: hsl(0, 0%, 95%);
+  --color-txt-200: hsl(0, 0%, 75%);
+  --color-txt-300: hsl(0, 0%, 55%);
 
-  --color-primary: hsl(15, 85%, 55%); /* Clay Orange */
+  --color-primary: hsl(210, 100%, 60%); /* Cool Lunar Blue */
 }
 
 @theme {
@@ -76,11 +76,15 @@
   }
 
   .heading-1 > .name {
-    @apply block bg-gradient-to-r from-primary via-green-500 to-red-500 bg-clip-text text-transparent;
+    @apply block bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent;
   }
 
   .section-heading {
     @apply flex items-center w-full font-mono font-bold text-txt-300 md:text-3xl text-2xl;
+  }
+
+  .badge {
+    @apply inline-block bg-primary/10 text-primary font-mono px-4 py-2 rounded-full text-sm ring ring-primary/30 cursor-default hover:-translate-y-2 transition-all duration-300;
   }
 
   .section-heading > .line {
@@ -134,7 +138,7 @@
 
   /* Hero Section  */
   .hero-container {
-    @apply flex flex-col justify-center items-start py-26;
+    @apply flex flex-col justify-center items-start py-18;
   }
 
   .section-container {
@@ -206,7 +210,7 @@
   }
 
   .profile-img {
-    @apply w-78 h-86 md:size-78 object-cover bg-gradient-to-r from-red-200 to-orange-200 transition-all duration-300 rounded-lg md:grayscale group-hover:grayscale-0 z-2;
+    @apply w-78 h-86 md:size-78 object-cover bg-gradient-to-r from-blue-200 via-fuchsia-200 to-blue-200 transition-all duration-300 rounded-lg md:grayscale group-hover:grayscale-0 z-2;
   }
 
   .profile-img-hover {
@@ -242,11 +246,7 @@
   /* Toast Container*/
 
   .toast-container {
-    @apply fixed max-md:top-20 max-md:right-6 md:bottom-6 md:right-10 w-80 bg-background-200 text-txt-100 rounded-lg shadow-lg z-45;
-  }
-
-  .toast-container > .toast {
-    @apply fixed max-md:top-20 max-md:right-6 md:bottom-6 md:right-10 w-80 bg-background-200 text-txt-100 rounded-lg shadow-lg z-45;
+    @apply fixed max-md:top-20 max-md:right-6 md:bottom-6 md:right-14 w-80 bg-background-300/50 backdrop-blur-2xl text-txt-100 rounded-lg shadow-lg z-45 ring ring-background-300;
   }
 
   .toast-container .close-btn {
