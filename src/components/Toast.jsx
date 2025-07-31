@@ -26,8 +26,8 @@ function Toast({ onClose, type = "success" }) {
   //ToDo: add GSAP animation
 
   return (
-    <div className='fixed top-16 right-10 w-80 bg-background-200 text-txt-100 rounded-lg shadow-lg z-45'>
-      <div className='flex items-center justify-between relative p-3'>
+    <div className='toast-container'>
+      <div className='toast'>
         <div className='flex items-start gap-3'>
           {icon}
           <div className='space-y-1'>
@@ -36,10 +36,8 @@ function Toast({ onClose, type = "success" }) {
           </div>
         </div>
 
-        <button
-          className='absolute top-3 right-4 cursor-pointer'
-          onClick={onClose}>
-          <CircleX className='text-txt-100 size-4 hover:text-primary' />
+        <button className='close-btn' onClick={onClose}>
+          <CircleX className='close-icon' />
         </button>
       </div>
 

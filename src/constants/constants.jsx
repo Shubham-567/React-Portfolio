@@ -1,7 +1,6 @@
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress, SiMongodb, SiMysql } from "react-icons/si";
+import { SiExpress, SiMongodb, SiMysql, SiTypescript } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
 export const skills = [
@@ -12,7 +11,7 @@ export const skills = [
   { icon: <SiExpress className='skill-icon' />, skill: "Express.js" },
   { icon: <SiMongodb className='skill-icon' />, skill: "MongoDB" },
   { icon: <SiMysql className='skill-icon' />, skill: "MySQL" },
-  { icon: <RiTailwindCssFill className='skill-icon' />, skill: "Tailwind CSS" },
+  { icon: <SiTypescript className='skill-icon' />, skill: "TypeScript" },
 ];
 
 export const projects = [
@@ -21,7 +20,7 @@ export const projects = [
     title: "RentEase – Car Rental System",
     description:
       "Full-stack app for browsing, booking cars in real-time with secure payments. Includes dashboards for admins and users, built with JWT auth.",
-    techStack: ["React", "Node.js", "Express", "MySQL", "Tailwind CSS"],
+    techStack: ["React", "Node.js", "Express", "MySQL", "TypeScript"],
     repo: "https://github.com/Shubham-567/RentEase-Car-Rental-System",
     live: "https://rent-ease-site.vercel.app",
   },

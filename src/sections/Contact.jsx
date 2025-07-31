@@ -7,7 +7,7 @@ import { Loader, Loader2 } from "lucide-react";
 function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [showToast, setShowToast] = useState(false);
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("error");
   const form = useRef();
 
   const serviceId = import.meta.env.VITE_EMAIL_JS_SERVICE_ID;
