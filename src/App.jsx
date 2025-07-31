@@ -7,6 +7,7 @@ import Contact from "./sections/Contact";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
+import SocialLinks from "./components/SocialLinks";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <SocialLinks />
     </>
   );
 }

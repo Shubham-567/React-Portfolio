@@ -2,6 +2,7 @@ import { FaNodeJs, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiExpress, SiMongodb, SiMysql, SiTypescript } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export const skills = [
   { icon: <IoLogoJavascript className='skill-icon' />, skill: "JavaScript" },
@@ -12,6 +13,12 @@ export const skills = [
   { icon: <SiMongodb className='skill-icon' />, skill: "MongoDB" },
   { icon: <SiMysql className='skill-icon' />, skill: "MySQL" },
   { icon: <SiTypescript className='skill-icon' />, skill: "TypeScript" },
+];
+
+export const socials = [
+  { name: "GitHub", url: "https://github.com/Shubham-567", icon: Github },
+  { name: "LinkedIn", url: "https://linkedin.com", icon: Linkedin },
+  { name: "Email", url: "mailto:shubhampatil1356@gmail.com", icon: Mail },
 ];
 
 export const projects = [

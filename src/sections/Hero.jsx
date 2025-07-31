@@ -1,16 +1,22 @@
-import { Download } from "lucide-react";
+import { Download, MapPin } from "lucide-react";
 import Button from "../components/Button";
+import { socials } from "../constants/constants";
 
 function Hero() {
   // TODO: add GSAP animations
 
   return (
     <section className='hero-container'>
+      {/* Location */}
+      <p className='font-mono text-txt-300 hover:text-primary text-xs tracking-wide mb-6 flex items-center gap-2 cursor-default'>
+        <MapPin className='size-4' /> <span>Jalgaon, Maharashtra, India</span>
+      </p>
+
       {/* Heading */}
       <p className='mono-txt'>Hi, my name is</p>
       <h1 className='heading-1'>
-        <span className='name'>Shubham</span>I turn designs into functional
-        web experiences.
+        <span className='name'>Shubham</span>I turn designs into functional web
+        experiences.
       </h1>
 
       {/* Description */}
@@ -32,6 +38,24 @@ function Hero() {
           </Button>
         </a>
       </div>
+
+      {/* Social Links  */}
+      <ul className='md:hidden flex items-center gap-4 mt-6'>
+        {socials.map((link) => {
+          const Icon = link.icon;
+          return (
+            <li key={link.name}>
+              <a
+                href={link.url}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='block text-txt-200 hover:text-primary transition-all duration-300 transform hover:-translate-y-1'>
+                <Icon className='size-6' />
+              </a>
+            </li>
+          );
+        })}
+      </ul>
     </section>
   );
 }
