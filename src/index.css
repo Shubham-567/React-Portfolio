@@ -129,11 +129,11 @@
   }
 
   .mobile-nav-wrapper {
-    @apply absolute -z-5 bg-background-100/80 backdrop-blur-sm h-screen w-screen -top-2 left-0;
+    @apply absolute -z-5 bg-background-100/80 backdrop-blur-sm h-[105vh] w-screen -top-2 left-0;
   }
 
   .mobile-nav-links {
-    @apply flex flex-col justify-center items-center md:hidden font-mono gap-8 h-[90%];
+    @apply flex flex-col justify-center items-center md:hidden font-mono gap-8 h-screen;
   }
 
   /* Hero Section  */

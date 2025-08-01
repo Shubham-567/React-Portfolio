@@ -1,6 +1,6 @@
 import { Download, MapPin } from "lucide-react";
 import Button from "../components/Button";
-import { socials } from "../constants/constants";
+import { resumeLink, socials } from "../constants/constants";
 
 function Hero() {
   // TODO: add GSAP animations
@@ -33,10 +33,7 @@ function Hero() {
 
       {/* Call to action */}
       <div className='flex flex-col sm:flex-row items-start sm:items-center gap-4 text-sm'>
-        <a
-          href='https://drive.google.com/file/d/1nqk791XKzc7LjqS6XTKrSqztQoqwsSN-/view'
-          target='_blank'
-          rel='noopener noreferrer'>
+        <a href={resumeLink} target='_blank' rel='noopener noreferrer'>
           <Button>
             <Download />
             Download Resume

@@ -15,9 +15,16 @@ export const skills = [
   { icon: <SiTypescript className='skill-icon' />, skill: "TypeScript" },
 ];
 
+export const resumeLink =
+  "https://drive.google.com/file/d/1MoZqR9YLnqB40VeSbRZG-lPGR6YgexXH/view";
+
 export const socials = [
   { name: "GitHub", url: "https://github.com/Shubham-567", icon: Github },
-  { name: "LinkedIn", url: "https://linkedin.com", icon: Linkedin },
+  {
+    name: "LinkedIn",
+    url: "http://www.linkedin.com/in/shubhampatil56",
+    icon: Linkedin,
+  },
   { name: "Email", url: "mailto:shubhampatil1356@gmail.com", icon: Mail },
 ];
 

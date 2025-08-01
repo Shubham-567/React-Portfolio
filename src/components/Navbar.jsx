@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import Button from "./Button";
 import { useEffect, useState } from "react";
+import { resumeLink } from "../constants/constants";
 
 function Navbar() {
   const logo = "<SP/>";
@@ -23,6 +24,8 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScrolled);
   }, []);
 
+  // Add GSAP sliding animations
+
   return (
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
@@ -33,7 +36,9 @@ function Navbar() {
           isOpen ? "bg-background-200" : ""
         } ${scrolled ? "scrolled" : ""}`}>
         <div className='logo'>
-          <a href='#'>{logo}</a>
+          <a href='#' onClick={() => setIsOpen(false)}>
+            {logo}
+          </a>
         </div>
         <ul className='hidden md:flex flex-between gap-6'>
           {navlinks.map((link, i) => (
@@ -45,12 +50,11 @@ function Navbar() {
             </li>
           ))}
 
-          <a
-            href='https://drive.google.com/file/d/1nqk791XKzc7LjqS6XTKrSqztQoqwsSN-/view'
-            target='_blank'
-            rel='noopener noreferrer'>
-            <Button className='px-4 py-2 text-sm'>Resume</Button>
-          </a>
+          <li>
+            <a href={resumeLink} target='_blank' rel='noopener noreferrer'>
+              <Button className='px-4 py-2 text-sm'>Resume</Button>
+            </a>
+          </li>
         </ul>
 
         {/* Mobile Menu Icon  */}
@@ -71,23 +75,20 @@ function Navbar() {
               <li
                 key={"link" + i}
                 className='text-2xl navLinks group hover:text-primary'>
-                {link && link === "Resume" ? (
-                  <a
-                    href='https://drive.google.com/file/d/1nqk791XKzc7LjqS6XTKrSqztQoqwsSN-/view'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    <Button className='px-4 py-2'>{link}</Button>
-                  </a>
-                ) : (
-                  <a
-                    href={`#${link.toLowerCase()}`}
-                    onClick={() => setIsOpen(false)}>
-                    <span>{link}</span>
-                    <span className='underline'></span>
-                  </a>
-                )}
+                <a
+                  href={`#${link.toLowerCase()}`}
+                  onClick={() => setIsOpen(false)}>
+                  <span>{link}</span>
+                  <span className='underline'></span>
+                </a>
               </li>
             ))}
+
+            <li>
+              <a href={resumeLink} target='_blank' rel='noopener noreferrer'>
+                <Button className='px-4 py-2 text-2xl'>Resume</Button>
+              </a>
+            </li>
           </ul>
         </nav>
       )}
