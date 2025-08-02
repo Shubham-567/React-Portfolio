@@ -8,15 +8,15 @@
 
   --text-2xs: 0.6rem;
 
-  --color-background-100: hsl(240, 15%, 4%);
-  --color-background-200: hsl(240, 12%, 9%);
-  --color-background-300: hsl(240, 10%, 14%);
+  --color-background-100: hsl(220, 25%, 4%);
+  --color-background-200: hsl(220, 20%, 9%);
+  --color-background-300: hsl(220, 15%, 14%);
 
-  --color-txt-100: hsl(0, 0%, 95%);
-  --color-txt-200: hsl(0, 0%, 75%);
-  --color-txt-300: hsl(0, 0%, 55%);
+  --color-txt-100: hsl(25, 15%, 95%);
+  --color-txt-200: hsl(25, 12%, 80%);
+  --color-txt-300: hsl(25, 8%, 70%);
 
-  --color-primary: hsl(210, 100%, 60%); /* Cool Lunar Blue */
+  --color-primary: hsl(25, 100%, 60%); /* Solar Orange */
 }
 
 @theme {
@@ -25,6 +25,7 @@
 
   --text-2xs: var(--text-2xs);
 
+  /* Solar Flare Theme (vibrant orange) */
   --color-background-100: var(--color-background-100);
   --color-background-200: var(--color-background-200);
   --color-background-300: var(--color-background-300);
@@ -72,15 +73,15 @@
   }
 
   .heading-1 {
-    @apply font-sans font-bold text-txt-300 md:text-6xl sm:text-5xl text-4xl;
+    @apply font-sans font-bold text-txt-200 md:text-6xl sm:text-5xl text-4xl;
   }
 
   .heading-1 > .name {
-    @apply block bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent;
+    @apply block bg-gradient-to-r from-amber-300 via-orange-500 to-red-400 bg-clip-text text-transparent;
   }
 
   .section-heading {
-    @apply flex items-center w-full font-mono font-bold text-txt-300 md:text-3xl text-2xl;
+    @apply flex items-center w-full font-mono font-bold text-txt-100 md:text-3xl text-2xl;
   }
 
   .badge {
@@ -100,7 +101,7 @@
   }
 
   .primary-btn {
-    @apply flex items-center gap-2 ring ring-primary font-mono text-primary px-8 py-4 rounded-md hover:bg-primary/15 hover:cursor-pointer transition-colors duration-300;
+    @apply flex items-center gap-2 ring ring-primary font-mono text-primary px-8 py-4 rounded-md hover:bg-primary/10 hover:cursor-pointer transition-colors duration-300;
   }
 
   /* Navbar */
@@ -121,7 +122,7 @@
   }
 
   .scrolled {
-    @apply bg-background-300/50 backdrop-blur-2xl rounded-full max-w-6xl;
+    @apply bg-background-300/50 backdrop-blur-2xl rounded-full max-w-6xl ring ring-background-200;
   }
 
   .menu-icon {
@@ -192,7 +193,7 @@
   }
 
   .project-info .skill-badge {
-    @apply px-4 py-2 bg-background-100 text-txt-200 text-2xs rounded-full cursor-default;
+    @apply px-4 py-2 bg-background-300 text-txt-200 text-2xs rounded-full cursor-default;
   }
 
   .project-info .links-container {
@@ -200,7 +201,7 @@
   }
 
   .project-link-btn {
-    @apply ring ring-background-300 outline-none py-2 px-2 rounded-md flex items-center gap-1 text-xs hover:text-primary;
+    @apply ring ring-background-300 hover:ring-primary outline-none py-2 px-2 rounded-md flex items-center gap-1 text-xs hover:text-primary;
   }
 
   /*About Section*/
@@ -210,7 +211,7 @@
   }
 
   .profile-img {
-    @apply w-78 h-86 md:size-78 object-cover bg-gradient-to-r from-blue-200 via-fuchsia-200 to-blue-200 transition-all duration-300 rounded-lg md:grayscale group-hover:grayscale-0 z-2;
+    @apply w-78 h-86 md:size-78 object-cover bg-gradient-to-r from-red-200 to-orange-200 transition-all duration-300 rounded-lg md:grayscale-0 group-hover:grayscale-0 z-2;
   }
 
   .profile-img-hover {
@@ -219,7 +220,7 @@
 
   /* Contact Form */
   .form-container {
-    @apply py-6 md:max-w-3/4 mx-auto;
+    @apply py-6 md:max-w-9/10 lg:max-w-3/4 mx-auto;
   }
 
   .input-box {

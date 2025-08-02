@@ -42,12 +42,12 @@ function Contact() {
     <>
       <section id='contact' className='section-container'>
         <h3 className='section-heading'>
-          Contact
+          Contact Me
           <span className='line' />
         </h3>
 
         <div className='form-container'>
-          <p className='text-txt-300 text-center mb-6'>
+          <p className='text-txt-300 text-center mb-6 md:px-10'>
             Have a project in mind or want to connect? Drop me a message below,
             and I'll get back to you as soon as possible.
           </p>

@@ -51,8 +51,9 @@ function Hero() {
                 href={link.url}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='block text-txt-200 hover:text-primary transition-all duration-300 transform hover:-translate-y-1'>
-                <Icon className='size-6' />
+                className='text-txt-200 hover:text-primary transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-2 ring ring-background-300 px-2 py-2 text-xs rounded-md '>
+                <Icon className='size-4' />
+                {link.name}
               </a>
             </li>
           );
