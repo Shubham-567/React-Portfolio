@@ -15,8 +15,8 @@ export const skills = [
   { icon: <SiTypescript className='skill-icon' />, skill: "TypeScript" },
 ];
 
-export const resumeLink =
-  "https://drive.google.com/file/d/1MoZqR9YLnqB40VeSbRZG-lPGR6YgexXH/view";
+// export const resumeLink = "https://drive.google.com/file/d/1MoZqR9YLnqB40VeSbRZG-lPGR6YgexXH/view";
+export const resumeLink = "/Shubham-Patil-Resume.pdf";
 
 export const socials = [
   { name: "GitHub", url: "https://github.com/Shubham-567", icon: Github },

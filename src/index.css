@@ -8,6 +8,7 @@
 
   --text-2xs: 0.6rem;
 
+  /* Solar Flare Theme */
   --color-background-100: hsl(220, 25%, 4%);
   --color-background-200: hsl(220, 20%, 9%);
   --color-background-300: hsl(220, 15%, 14%);
@@ -25,7 +26,6 @@
 
   --text-2xs: var(--text-2xs);
 
-  /* Solar Flare Theme (vibrant orange) */
   --color-background-100: var(--color-background-100);
   --color-background-200: var(--color-background-200);
   --color-background-300: var(--color-background-300);
@@ -52,7 +52,7 @@
     font-weight: 400;
     font-size: 1rem; /* 16px */
     overflow-x: hidden;
-    @apply selection:bg-primary selection:text-txt-100;
+    @apply selection:bg-primary/90 selection:text-txt-100;
   }
 }
 
@@ -85,7 +85,7 @@
   }
 
   .badge {
-    @apply inline-block bg-primary/10 text-primary font-mono px-4 py-2 rounded-full text-sm ring ring-primary/30 cursor-default hover:-translate-y-2 transition-all duration-300;
+    @apply inline-block bg-primary/10 text-primary font-mono px-4 py-2 rounded-full text-xs sm:text-sm ring ring-primary/30 cursor-default hover:-translate-y-2 transition-all duration-300;
   }
 
   .section-heading > .line {

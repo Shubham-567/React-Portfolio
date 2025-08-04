@@ -15,12 +15,12 @@ function Hero() {
       </h1>
 
       {/* Badge */}
-      <div className='mt-6'>
-        <span className='badge'>Full-stack Web Developer</span>
+      <div className='mt-4 sm:mt-6'>
+        <span className='badge'>Aspiring Full-stack Web Developer</span>
       </div>
 
       {/* Description */}
-      <p className='text-txt-300 md:max-w-2/3 my-6'>
+      <p className='text-txt-300 md:max-w-2/3 my-4 sm:my-6'>
         I craft responsive web apps using React, Node.js, Express, and MongoDB.
         I focus on both frontend and backend with attention to detail, clean
         architecture, and practical problem-solving.
