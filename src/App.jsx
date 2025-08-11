@@ -14,7 +14,7 @@ import NeonCursor from "./components/NeonCursor";
 function App() {
   return (
     <>
-      <NeonCursor />
+      {/* <NeonCursor /> */}
       <StarsBackground />
       <Navbar />
       <main className='main-container max-w-5xl'>

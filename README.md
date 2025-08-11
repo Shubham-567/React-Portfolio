@@ -60,7 +60,7 @@ I build web apps using the **MERN stack**, TypeScript, and modern tools.
 ---
 
 <p align="center">
-  <em>“The best way to predict the future is to build it. ”</em>
+  <em>“The best way to predict the future is to build it.”</em>
 </p>
 
 <!-- Animated Footer -->
