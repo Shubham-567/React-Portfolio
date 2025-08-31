@@ -16,7 +16,7 @@ function Hero() {
 
       {/* Badge */}
       <div className='mt-4 sm:mt-6'>
-        <span className='badge'>Aspiring Full-stack Web Developer</span>
+        <span className='badge'>Full-stack Web Developer</span>
       </div>
 
       {/* Description */}

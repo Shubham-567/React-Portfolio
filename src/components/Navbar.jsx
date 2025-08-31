@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { resumeLink } from "../constants/constants";
 
 function Navbar() {
-  const logo = "<SP/>";
+  const logo = "<Shubham/>";
   const navlinks = ["Skills", "Projects", "About", "Contact"];
 
   const [isOpen, setIsOpen] = useState(false); // menu

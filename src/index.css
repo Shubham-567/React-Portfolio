@@ -106,7 +106,7 @@
 
   /* Navbar */
   .logo {
-    @apply font-mono font-bold text-primary text-2xl;
+    @apply font-mono font-black text-primary text-2xl tracking-wider;
   }
 
   .nav-links {
@@ -211,11 +211,11 @@
   }
 
   .profile-img {
-    @apply w-78 h-86 md:size-78 object-cover bg-gradient-to-r from-red-200 to-orange-200 transition-all duration-300 rounded-lg md:grayscale-100 group-hover:grayscale-0 z-2;
+    @apply w-78 h-86 md:size-84 object-cover bg-gradient-to-r from-red-200 to-orange-200 transition-all duration-300 rounded-lg grayscale-100 group-hover:grayscale-0 z-2;
   }
 
   .profile-img-hover {
-    @apply absolute top-0 max-md:h-86 size-78 w-full bg-primary transition-all duration-300 -z-10 rounded-lg max-md:translate-2 group-hover:translate-2;
+    @apply absolute top-0 max-md:h-86 size-84 w-full bg-primary transition-all duration-300 -z-10 rounded-lg group-hover:translate-2;
   }
 
   /* Contact Form */
