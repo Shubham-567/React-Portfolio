@@ -58,11 +58,43 @@ export const projects = [
   },
   {
     imgUrl: "images/project-4.png",
-    title: "Leaderboard App",
+    title: "Taskly – MERN Task Manager",
     description:
-      "Real-time leaderboard app with user selection, point claiming, history tracking, and a dynamic interface using MongoDB and REST API.",
-    techStack: ["React", "Node.js", "Express", "MongoDB"],
-    repo: "https://github.com/Shubham-567/leaderboard-project",
-    live: "https://leaderboard-web.vercel.app/",
+      "A MERN-based task manager with JWT authentication and full CRUD functionality. Features task filtering and a responsive UI.",
+    techStack: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Zustand",
+      "Tailwind CSS",
+    ],
+    repo: "https://github.com/Shubham-567/Taskly",
+    live: "https://taskly-site.vercel.app",
+  },
+  {
+    imgUrl: "images/project-5.png",
+    title: "Jarurat Care – Patient Dashboard",
+    description:
+      "A responsive dashboard for viewing and managing patient records, featuring live search and a clean UI built with React and Tailwind CSS.",
+    techStack: ["React", "Tailwind CSS", "React Router"],
+    repo: "https://github.com/Shubham-567/JaruratCare-Patient-Dashboard",
+    live: "https://jarurat-patient-dashboard.vercel.app",
+  },
+  {
+    imgUrl: "images/project-6.png",
+    title: "QuickChat",
+    description:
+      "Full-stack, real-time chat app with JWT auth, image uploads via Cloudinary, and instant messaging powered by Socket.IO.",
+    techStack: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Socket.IO",
+      "Tailwind CSS",
+    ],
+    repo: "https://github.com/Shubham-567/Quick-Chat",
+    live: "https://quick-chat-site.vercel.app",
   },
 ];
