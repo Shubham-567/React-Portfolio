@@ -92,7 +92,7 @@ The project follows a standard React application structure to keep the code orga
 └── README.md
 ```
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
