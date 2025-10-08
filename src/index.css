@@ -8,16 +8,15 @@
 
   --text-2xs: 0.6rem;
 
-  /* Solar Flare Theme */
-  --color-background-100: hsl(220, 25%, 4%);
-  --color-background-200: hsl(220, 20%, 9%);
-  --color-background-300: hsl(220, 15%, 14%);
+  --color-background-100: hsl(190, 30%, 5%);
+  --color-background-200: hsl(190, 25%, 10%);
+  --color-background-300: hsl(190, 20%, 15%);
 
-  --color-txt-100: hsl(25, 15%, 95%);
-  --color-txt-200: hsl(25, 12%, 80%);
-  --color-txt-300: hsl(25, 8%, 70%);
+  --color-txt-100: hsl(190, 10%, 95%);
+  --color-txt-200: hsl(190, 8%, 80%);
+  --color-txt-300: hsl(190, 5%, 70%);
 
-  --color-primary: hsl(25, 100%, 60%); /* Solar Orange */
+  --color-primary: hsl(180, 90%, 45%);
 }
 
 @theme {
@@ -35,9 +34,6 @@
   --color-txt-300: var(--color-txt-300);
 
   --color-primary: var(--color-primary);
-
-  --color-border: var(--color-border);
-  --color-hover: var(--color-hover);
 }
 
 @layer base {
@@ -77,7 +73,7 @@
   }
 
   .heading-1 > .name {
-    @apply block bg-gradient-to-r from-amber-300 via-orange-500 to-red-400 bg-clip-text text-transparent;
+    @apply block bg-gradient-to-r from-cyan-300 via-teal-500 to-sky-400 bg-clip-text text-transparent;
   }
 
   .section-heading {
