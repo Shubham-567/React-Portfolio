@@ -1,4 +1,4 @@
-import { Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import Button from "./Button";
 import { useEffect, useState } from "react";
 import { resumeLink } from "../constants/constants";
@@ -8,6 +8,7 @@ function Navbar() {
   const navlinks = ["Skills", "Projects", "About", "Contact"];
 
   const [isOpen, setIsOpen] = useState(false); // menu
+  const [isLightMode, setIsLightMode] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -23,6 +24,17 @@ function Navbar() {
 
     return () => window.removeEventListener("scroll", handleScrolled);
   }, []);
+
+  // handle light mode toggle function with preffered theme
+  useEffect(() => {
+    if (isLightMode) {
+      document.documentElement.classList.add("light");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.remove("light");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isLightMode]);
 
   // Add GSAP sliding animations
 
@@ -55,15 +67,40 @@ function Navbar() {
               <Button className='px-4 py-2 text-sm'>Resume</Button>
             </a>
           </li>
+
+          <li>
+            <button
+              onClick={() => setIsLightMode(!isLightMode)}
+              className='p-2 bg-primary/5 hover:bg-primary/10 rounded-full hover:text-primary cursor-pointer'>
+              {isLightMode ? (
+                <Sun className='size-5' />
+              ) : (
+                <Moon className='size-5' />
+              )}
+            </button>
+          </li>
         </ul>
 
-        {/* Mobile Menu Icon  */}
-        <div onClick={() => setIsOpen(!isOpen)} className='md:hidden'>
-          {!isOpen ? (
-            <Menu className='menu-icon' />
-          ) : (
-            <X className='menu-icon' />
-          )}
+        <div className='flex items-center gap-4 md:hidden'>
+          {/* light mode toggle  */}
+          <button
+            onClick={() => setIsLightMode(!isLightMode)}
+            className='p-2 bg-primary/5 hover:bg-primary/10 rounded-full hover:text-primary cursor-pointer'>
+            {isLightMode ? (
+              <Sun className='size-5' />
+            ) : (
+              <Moon className='size-5' />
+            )}
+          </button>
+
+          {/* Mobile Menu Icon  */}
+          <button onClick={() => setIsOpen(!isOpen)}>
+            {!isOpen ? (
+              <Menu className='menu-icon' />
+            ) : (
+              <X className='menu-icon' />
+            )}
+          </button>
         </div>
       </nav>
 

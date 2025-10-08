@@ -3,11 +3,6 @@
 @import "tailwindcss";
 
 :root {
-  --font-sans: "Inter", sans-serif;
-  --font-mono: "Fira Code", monospace;
-
-  --text-2xs: 0.6rem;
-
   --color-background-100: hsl(190, 30%, 5%);
   --color-background-200: hsl(190, 25%, 10%);
   --color-background-300: hsl(190, 20%, 15%);
@@ -19,11 +14,23 @@
   --color-primary: hsl(180, 90%, 45%);
 }
 
-@theme {
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
+.light {
+  --color-background-100: hsl(190, 30%, 98%);
+  --color-background-200: hsl(190, 25%, 94%);
+  --color-background-300: hsl(190, 20%, 89%);
 
-  --text-2xs: var(--text-2xs);
+  --color-txt-100: hsl(190, 15%, 15%);
+  --color-txt-200: hsl(190, 10%, 35%);
+  --color-txt-300: hsl(190, 8%, 50%);
+
+  --color-primary: hsl(180, 85%, 38%);
+}
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  --text-2xs: 0.6rem;
 
   --color-background-100: var(--color-background-100);
   --color-background-200: var(--color-background-200);
@@ -114,7 +121,7 @@
   }
 
   .navbar-web {
-    @apply py-4 z-10;
+    @apply py-3 z-10;
   }
 
   .scrolled {
