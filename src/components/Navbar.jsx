@@ -73,9 +73,9 @@ function Navbar() {
               onClick={() => setIsLightMode(!isLightMode)}
               className='p-2 bg-primary/5 hover:bg-primary/10 rounded-full hover:text-primary cursor-pointer'>
               {isLightMode ? (
-                <Sun className='size-5' />
-              ) : (
                 <Moon className='size-5' />
+              ) : (
+                <Sun className='size-5' />
               )}
             </button>
           </li>
