@@ -51,7 +51,7 @@ function Navbar() {
             ? "bg-background-300/50 backdrop-blur-2xl rounded-full max-w-6xl ring ring-background-200"
             : ""
         }`}>
-        <div className='font-mono font-black text-primary text-2xl tracking-wider'>
+        <div className='font-mono font-black text-primary text-2xl tracking-wider drop-shadow-[0px_0px_39px_rgba(37,161,233,0.9)]'>
           <a href='#' onClick={() => setIsOpen(false)}>
             {logo}
           </a>

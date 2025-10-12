@@ -12,7 +12,7 @@ function Hero() {
         {/* Heading */}
         <p className='mono-txt'>Hi, my name is</p>
         <h1 className='font-sans font-bold text-txt-200 max-w-4xl md:text-6xl sm:text-5xl text-4xl text-balance'>
-          <span className='block text-primary text-shadow-xs text-shadow-primary'>
+          <span className='block text-primary text-shadow-xs text-shadow-primary drop-shadow-[0px_0px_39px_rgba(37,161,233,0.6)]'>
             Shubham Patil
           </span>
           I build fast, clean, and reliable websites.

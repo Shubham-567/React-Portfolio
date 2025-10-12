@@ -48,7 +48,7 @@ export const projects = [
       "TypeScript",
       "Sanity CMS",
       "Tailwind CSS",
-      "Lucide React",
+      "Next Auth",
     ],
     repo: "https://github.com/Shubham-567/Pitch-Base",
     live: "https://pitch-base.vercel.app",

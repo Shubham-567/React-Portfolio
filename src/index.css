@@ -10,7 +10,7 @@
   --color-txt-100: hsl(215, 28%, 94%);
   --color-txt-200: hsl(215, 25%, 85%);
   --color-txt-300: hsl(215, 20%, 65%);
-  --color-primary: hsl(202, 82%, 53%);
+  --color-primary: rgb(37, 161, 233);
 }
 
 /* Light Theme */
