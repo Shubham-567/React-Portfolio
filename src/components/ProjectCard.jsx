@@ -32,7 +32,7 @@ function ProjectCard({ project }) {
             {techStack.map((tech, i) => (
               <div
                 key={i}
-                className='px-3 py-1.5 bg-background-300 text-txt-200 text-2xs font-medium rounded-2xl cursor-default hover:-translate-y-1 transition-all duration-300'>
+                className='px-3 py-1.5 bg-primary/10 text-primary text-2xs font-medium rounded-2xl cursor-default hover:-translate-y-1 transition-all duration-300'>
                 {tech}
               </div>
             ))}

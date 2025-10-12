@@ -2,28 +2,26 @@
 
 @import "tailwindcss";
 
+/* Dark Theme (Default) */
 :root {
-  --color-background-100: hsl(190, 30%, 5%);
-  --color-background-200: hsl(190, 25%, 10%);
-  --color-background-300: hsl(190, 20%, 15%);
-
-  --color-txt-100: hsl(190, 10%, 95%);
-  --color-txt-200: hsl(190, 8%, 80%);
-  --color-txt-300: hsl(190, 5%, 70%);
-
-  --color-primary: hsl(180, 90%, 45%);
+  --color-background-100: hsl(222, 83%, 5%);
+  --color-background-200: hsl(222, 47%, 11%);
+  --color-background-300: hsl(222, 31%, 17%);
+  --color-txt-100: hsl(215, 28%, 94%);
+  --color-txt-200: hsl(215, 25%, 85%);
+  --color-txt-300: hsl(215, 20%, 65%);
+  --color-primary: hsl(202, 82%, 53%);
 }
 
+/* Light Theme */
 .light {
-  --color-background-100: hsl(190, 30%, 98%);
-  --color-background-200: hsl(190, 25%, 94%);
-  --color-background-300: hsl(190, 20%, 89%);
-
-  --color-txt-100: hsl(190, 15%, 15%);
-  --color-txt-200: hsl(190, 10%, 35%);
-  --color-txt-300: hsl(190, 8%, 50%);
-
-  --color-primary: hsl(180, 85%, 38%);
+  --color-background-100: hsl(0, 0%, 100%);
+  --color-background-200: hsl(210, 40%, 98%);
+  --color-background-300: hsl(215, 28%, 94%);
+  --color-txt-100: hsl(222, 47%, 11%);
+  --color-txt-200: hsl(222, 28%, 28%);
+  --color-txt-300: hsl(221, 23%, 35%);
+  --color-primary: hsl(202, 82%, 53%);
 }
 
 @theme {
@@ -81,7 +79,7 @@
   }
 
   .section-heading {
-    @apply flex items-center w-full font-mono font-bold text-txt-100 md:text-3xl text-2xl;
+    @apply flex items-center w-full font-mono font-bold text-txt-100 md:text-3xl text-2xl mb-8;
   }
 
   .section-heading > .line {

@@ -9,7 +9,7 @@ function Projects() {
         <span className='line' />
       </h3>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 py-6 gap-6 w-full'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-6 gap-6 w-full'>
         {projects.map((project, i) => (
           <ProjectCard key={i} project={project} />
         ))}

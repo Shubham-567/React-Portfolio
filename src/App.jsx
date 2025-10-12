@@ -17,7 +17,7 @@ function App() {
       {/* <NeonCursor /> */}
       <StarsBackground />
       <Navbar />
-      <main className='main-container max-w-5xl'>
+      <main className='main-container max-w-7xl'>
         <Hero />
         <Skills />
         <Projects />

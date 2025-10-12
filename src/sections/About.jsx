@@ -6,7 +6,7 @@ function About() {
         <span className='line' />
       </h3>
 
-      <div className='flex flex-col md:flex-row justify-center items-start gap-6 py-6'>
+      <div className='flex flex-col max-w-4xl mx-auto md:flex-row justify-center items-start gap-6 py-6'>
         <div className='md:w-2/3 space-y-6'>
           <p className='text-txt-300'>
             Hi, I’m Shubham Patil, a full-stack web developer with a focus on
