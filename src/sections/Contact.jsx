@@ -46,45 +46,57 @@ function Contact() {
           <span className='line' />
         </h3>
 
-        <div className='form-container'>
+        <div className='py-6 md:max-w-9/10 lg:max-w-3/4 mx-auto'>
           <p className='text-txt-300 text-center mb-6 md:px-10'>
             Have a project in mind or want to connect? Drop me a message below,
             and I'll get back to you as soon as possible.
           </p>
 
           <form ref={form} onSubmit={sendEmail} className='space-y-5'>
-            <div className='input-container'>
-              <div className='input-wrapper'>
-                <label htmlFor='name'>Name</label>
+            <div className='flex max-md:flex-col items-center gap-4'>
+              <div className='flex flex-col gap-1 w-full'>
+                <label
+                  htmlFor='name'
+                  className='font-mono text-sm text-txt-200'>
+                  Name
+                </label>
                 <input
                   id='name'
                   name='user_name'
                   type='text'
                   placeholder='Your Name'
-                  className='input-box'
+                  className='w-full bg-background-200 border border-background-300 text-txt-100 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-colors'
                   required
                 />
               </div>
 
-              <div className='input-wrapper'>
-                <label htmlFor='email'>Email</label>
+              <div className='flex flex-col gap-1 w-full'>
+                <label
+                  htmlFor='email'
+                  className='font-mono text-sm text-txt-200'>
+                  Email
+                </label>
                 <input
                   id='email'
                   name='user_email'
                   type='email'
                   placeholder='Your Email'
-                  className='input-box'
+                  className='w-full bg-background-200 border border-background-300 text-txt-100 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-colors'
                   required
                 />
               </div>
             </div>
-            <div className='input-wrapper'>
-              <label htmlFor='message'>Message</label>
+            <div className='flex flex-col gap-1 w-full'>
+              <label
+                htmlFor='message'
+                className='font-mono text-sm text-txt-200'>
+                Message
+              </label>
               <textarea
                 id='message'
                 name='user_message'
                 placeholder='Your Message'
-                className='input-box'
+                className='w-full bg-background-200 border border-background-300 text-txt-100 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition-colors'
                 rows='4'
                 required
               />

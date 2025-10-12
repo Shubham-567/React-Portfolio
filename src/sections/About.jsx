@@ -6,7 +6,7 @@ function About() {
         <span className='line' />
       </h3>
 
-      <div className='about-container'>
+      <div className='flex flex-col md:flex-row justify-center items-start gap-6 py-6'>
         <div className='md:w-2/3 space-y-6'>
           <p className='text-txt-300'>
             Hi, I’m Shubham Patil, a full-stack web developer with a focus on
@@ -26,10 +26,10 @@ function About() {
           <img
             src='images/profile.png'
             alt='profile-pic'
-            className='profile-img'
+            className='w-78 h-86 md:size-84 object-cover bg-gradient-to-r from-red-200 to-orange-200 transition-all duration-300 rounded-lg grayscale-100 group-hover:grayscale-0 z-2'
           />
 
-          <div className='profile-img-hover' />
+          <div className='absolute top-0 max-md:h-86 size-84 w-full bg-primary transition-all duration-300 -z-10 rounded-lg group-hover:translate-2' />
         </div>
       </div>
     </section>

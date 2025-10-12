@@ -44,17 +44,23 @@ function Navbar() {
         scrolled ? "top-2 px-4" : ""
       }`}>
       <nav
-        className={`main-container navbar-web flex-between transition-all duration-300  ${
+        className={`main-container py-3 z-10 flex-between transition-all duration-300  ${
           isOpen ? "bg-background-200" : ""
-        } ${scrolled ? "scrolled" : ""}`}>
-        <div className='logo'>
+        } ${
+          scrolled
+            ? "bg-background-300/50 backdrop-blur-2xl rounded-full max-w-6xl ring ring-background-200"
+            : ""
+        }`}>
+        <div className='font-mono font-black text-primary text-2xl tracking-wider'>
           <a href='#' onClick={() => setIsOpen(false)}>
             {logo}
           </a>
         </div>
         <ul className='hidden md:flex flex-between gap-6'>
           {navlinks.map((link, i) => (
-            <li key={"link" + i} className='nav-links group'>
+            <li
+              key={"link" + i}
+              className='font-mono text-txt-100 text-sm group'>
               <a href={`#${link.toLowerCase()}`}>
                 <span>{link}</span>
                 <span className='underline '></span>
@@ -96,9 +102,9 @@ function Navbar() {
           {/* Mobile Menu Icon  */}
           <button onClick={() => setIsOpen(!isOpen)}>
             {!isOpen ? (
-              <Menu className='menu-icon' />
+              <Menu className='text-primary size-8 hover:cursor-pointer' />
             ) : (
-              <X className='menu-icon' />
+              <X className='text-primary size-8 hover:cursor-pointer' />
             )}
           </button>
         </div>
@@ -106,8 +112,8 @@ function Navbar() {
 
       {/* Mobile Links */}
       {isOpen && (
-        <nav className='mobile-nav-wrapper'>
-          <ul className='mobile-nav-links'>
+        <nav className='absolute -z-5 bg-background-100/80 backdrop-blur-sm h-[105vh] w-screen -top-2 left-0'>
+          <ul className='flex flex-col justify-center items-center md:hidden font-mono gap-8 h-screen'>
             {navlinks.map((link, i) => (
               <li
                 key={"link" + i}

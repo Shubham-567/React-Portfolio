@@ -6,17 +6,21 @@ function Hero() {
   // TODO: add GSAP animations
 
   return (
-    <section className='hero-container'>
+    <section className='flex flex-col justify-center items-start py-18'>
       {/* Heading */}
       <p className='mono-txt'>Hi, my name is</p>
-      <h1 className='heading-1 text-balance'>
-        <span className='name'>Shubham Patil</span>I build fast, clean, and
-        reliable websites.
+      <h1 className='font-sans font-bold text-txt-200 md:text-6xl sm:text-5xl text-4xl text-balance'>
+        <span className='block text-primary text-shadow-xs text-shadow-primary'>
+          Shubham Patil
+        </span>
+        I build fast, clean, and reliable websites.
       </h1>
 
       {/* Badge */}
       <div className='mt-4 sm:mt-6'>
-        <span className='badge'>Full-stack Web Developer</span>
+        <span className='inline-block bg-primary/10 text-primary font-mono px-4 py-2 rounded-full text-xs sm:text-sm ring ring-primary/30 cursor-default hover:-translate-y-2 transition-all duration-300'>
+          Full-stack Web Developer
+        </span>
       </div>
 
       {/* Description */}
