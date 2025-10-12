@@ -43,7 +43,13 @@ export const projects = [
     title: "PitchBase – Startup Pitch Platform",
     description:
       "Platform where users pitch startup ideas, create profiles, sign in with GitHub, and browse other submissions using a clean UI.",
-    techStack: ["Next.js", "TypeScript", "Sanity CMS", "Tailwind CSS"],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Sanity CMS",
+      "Tailwind CSS",
+      "Lucide React",
+    ],
     repo: "https://github.com/Shubham-567/Pitch-Base",
     live: "https://pitch-base.vercel.app",
   },
@@ -77,7 +83,7 @@ export const projects = [
     title: "Jarurat Care – Patient Dashboard",
     description:
       "A responsive dashboard for viewing and managing patient records, featuring live search and a clean UI built with React and Tailwind CSS.",
-    techStack: ["React", "Tailwind CSS", "React Router"],
+    techStack: ["React", "Tailwind CSS", "React Router", "Lucide React"],
     repo: "https://github.com/Shubham-567/JaruratCare-Patient-Dashboard",
     live: "https://jarurat-patient-dashboard.vercel.app",
   },

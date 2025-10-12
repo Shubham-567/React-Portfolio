@@ -2,6 +2,8 @@ import React from "react";
 
 const HeroIllustration = () => {
   return (
+    //   illustration-1
+
     // <svg
     //   width='100%'
     //   height='100%'
@@ -189,6 +191,7 @@ const HeroIllustration = () => {
     //   />
     // </svg>
 
+    //   illustration-2
     <svg
       width='100%'
       height='100%'
