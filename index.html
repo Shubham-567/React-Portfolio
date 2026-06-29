@@ -22,6 +22,11 @@
       href="/images/Favicon/favicon-16x16.png" />
     <link rel="manifest" href="/images/Favicon/site.webmanifest" />
     <title>Shubham Portfolio</title>
+    <script>
+      if (localStorage.getItem("theme") === "light") {
+        document.documentElement.classList.add("light");
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
