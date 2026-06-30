@@ -5,40 +5,30 @@ import { resumeLink } from "../constants/constants";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-function Navbar({ isCursorEnabled, setIsCursorEnabled }) {
+function Navbar({ isCursorEnabled, setIsCursorEnabled, isLightMode, setIsLightMode }) {
   const logo = "<Shubham/>";
   const navlinks = ["Skills", "Projects", "About", "Contact"];
 
   const [isOpen, setIsOpen] = useState(false); // menu
-  const [isLightMode, setIsLightMode] = useState(() => {
-    return localStorage.getItem("theme") === "light";
-  });
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScrolled = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener("scroll", handleScrolled);
-
+    window.addEventListener("scroll", handleScrolled, { passive: true });
     return () => window.removeEventListener("scroll", handleScrolled);
   }, []);
 
-  // handle light mode toggle function with preffered theme
-  useEffect(() => {
-    if (isLightMode) {
-      document.documentElement.classList.add("light");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.classList.remove("light");
-      localStorage.setItem("theme", "dark");
-    }
-  }, [isLightMode]);
+
 
   // Custom smooth scroll handler
   const handleScrollTo = (id) => {
@@ -82,10 +72,11 @@ function Navbar({ isCursorEnabled, setIsCursorEnabled }) {
           maxWidth: scrolled ? '1152px' : '1280px',
           width: scrolled ? 'calc(100% - 2rem)' : '100%',
           marginTop: scrolled ? '1rem' : '0rem',
+          willChange: 'width, max-width, margin-top, background-color' // hardware acceleration hint
         }}
         className={`pointer-events-auto z-10 flex items-center justify-between border transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
           scrolled
-            ? "py-3 px-6 md:px-8 bg-background-200/70 backdrop-blur-xl border-txt-300/10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-2xl"
+            ? "py-3 px-6 md:px-8 bg-background-200/80 backdrop-blur-md border-txt-300/10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-2xl"
             : "py-6 px-6 sm:px-[4.5rem] bg-transparent border-transparent rounded-none shadow-none"
         } ${
           isOpen && !scrolled ? "bg-background-200/90 backdrop-blur-md border-txt-300/10 shadow-lg rounded-2xl px-6 py-4 sm:px-[4.5rem]" : ""

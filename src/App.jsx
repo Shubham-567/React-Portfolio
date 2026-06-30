@@ -17,15 +17,34 @@ function App() {
     return saved !== null ? JSON.parse(saved) : false;
   });
 
+  const [isLightMode, setIsLightMode] = useState(() => {
+    return localStorage.getItem("theme") === "light";
+  });
+
   useEffect(() => {
     localStorage.setItem("cursorEnabled", JSON.stringify(isCursorEnabled));
   }, [isCursorEnabled]);
 
+  useEffect(() => {
+    if (isLightMode) {
+      document.documentElement.classList.add("light");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.remove("light");
+      localStorage.setItem("theme", "dark");
+    }
+  }, [isLightMode]);
+
   return (
     <>
-      {isCursorEnabled && <NeonCursor />}
-      <StarsBackground />
-      <Navbar isCursorEnabled={isCursorEnabled} setIsCursorEnabled={setIsCursorEnabled} />
+      {/* {isCursorEnabled && <NeonCursor />} */}
+      {!isLightMode && <StarsBackground />}
+      <Navbar 
+        isCursorEnabled={isCursorEnabled} 
+        setIsCursorEnabled={setIsCursorEnabled}
+        isLightMode={isLightMode}
+        setIsLightMode={setIsLightMode}
+      />
       <main className='main-container max-w-7xl'>
         <Hero />
         <Skills />

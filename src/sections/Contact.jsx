@@ -188,7 +188,7 @@ function Contact() {
                 />
               </div>
 
-              <div className='flex justify-center md:justify-start mt-2'>
+              <div className='flex justify-center md:justify-end mt-2'>
                 <Button
                   type='submit'
                   isDisabled={isLoading}
